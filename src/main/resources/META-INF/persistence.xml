@@ -1,0 +1,19 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence ">
+    <persistence-unit name="catalogoPU">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>it.epicode.getset.Libro</class>
+        <class>it.epicode.getset.Rivista</class>
+        <class>it.epicode.getset.Utente</class>
+        <class>it.epicode.getset.Prestito</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/esercizio"/>
+            <property name="javax.persistence.jdbc.user" value="postgres"/>
+            <property name="javax.persistence.jdbc.password" value="AdfnEmb34R"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
